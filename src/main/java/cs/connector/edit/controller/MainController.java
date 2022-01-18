@@ -18,8 +18,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @RestController
 public class MainController {
 	
-	@GetMapping("/educatinalActivity")
-	public ResponseEntity<List<Map<String, Object>>> getSAAEducatinalActivity(
+	@GetMapping("/educationalActivity")
+	public ResponseEntity<List<Map<String, Object>>> getEducationalActivity(
 			@RequestParam String fiscalCode,
 			@RequestParam String entityType, 
 			@RequestParam String viewName) {
@@ -27,7 +27,7 @@ public class MainController {
 		ResourceLoader resourceLoader = new DefaultResourceLoader();
 		Resource resource = null;
 		try {
-			resource = resourceLoader.getResource("classpath:json/educatinalActivity.json");
+			resource = resourceLoader.getResource("classpath:json/educationalActivity.json");
 			List<Map<String,Object>> list = objectMapper.readValue(resource.getInputStream(), new TypeReference<List<Map<String, Object>>>() {});
 			return new ResponseEntity<List<Map<String, Object>>>(list, HttpStatus.OK);
 		} catch (Exception e) {

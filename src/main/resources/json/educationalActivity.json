@@ -1,6 +1,6 @@
 [
 	{
-		"entityType": "educatinalActivity",
+		"entityType": "educationalActivity",
 		"views": {
 			"exp": {
 				"attributes": {
@@ -31,7 +31,7 @@
 					]
 				}
 			},
-			"educatinalActivity": {
+			"educationalActivity": {
 				"attributes": {
 					"duration": "70",
 					"address": {
